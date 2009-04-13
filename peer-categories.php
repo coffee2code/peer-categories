@@ -34,21 +34,22 @@ Description: Display only the categories that are peer (i.e. share the same cate
 	listed.
 
 	By default, categories are listed as an HTML list.  The first argment to the template tag allows you to define a custom separator,
-	e.g. to have a simple comma-separated list of peer categories: `<?php peer_categories(','); ?>`.
+	e.g. to have a simple comma-separated list of peer categories: <?php peer_categories(','); ?>.
 
-	As with categories listed via `the_category()`, categories that are listed are presented as links to the respective category's
+	As with categories listed via the_category(), categories that are listed are presented as links to the respective category's
 	archive page.
 
-	Examples:
+	Example usage (based on preceeding example):
 
-	`<?php peer_categories(); ?>`
+	<?php peer_categories(); ?>
 	Displays something like:
-	    `<ul><li><a href="http://yourblog.com/category/books">Books</a></li>
-	    <li><a href="http://yourblog.com/category/movies">Movies</a></li></ul>`
+	    <ul><li><a href="http://yourblog.com/category/fruiting/bell-pepper">Bell Pepper</a></li>
+	    <li><a href="http://yourblog.com/category/fruiting/cucumber">Cucumber</a></li>
+	    <li><a href="http://yourblog.com/category/fruiting/pumpkin">Pumpkin</a></li></ul>
 
-	`<?php peer_categories(','); ?></ul>`
+	<?php peer_categories(','); ?></ul>
 	Displays something like:
-	    `<a href="http://yourblog.com/category/books">Books</a>, <a href="http://yourblog.com/category/movies">Movies</a>`
+    	<a href="http://yourblog.com/category/fruiting/bell-pepper">Bell Pepper</a>, <a href="http://yourblog.com/category/fruiting/cucumber">Cucumber</a>, <a href="http://yourblog.com/category/fruiting/pumpkin">Pumpkin</a>
 
 Compatible with WordPress 2.5+, 2.6+, 2.7+.
 
