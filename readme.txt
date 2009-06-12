@@ -1,10 +1,10 @@
 === Peer Categories ===
 Contributors: Scott Reilly
-Donate link: http://coffee2code.com
-Tags: categories, category, peer, sibling, related posts, similar posts, list, the_category
+Donate link: http://coffee2code.com/donate
+Tags: categories, category, peer, sibling, related posts, similar posts, list, the_category, coffee2code
 Requires at least: 2.5
-Tested up to: 2.7.1
-Stable tag: trunk
+Tested up to: 2.8
+Stable tag: 1.0
 Version: 1.0
 
 Display only the categories that are peer (i.e. share the same category parent) to all lowest-level assigned categories for the specified post.
