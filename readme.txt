@@ -52,7 +52,7 @@ Displays something like:
 
 == Installation ==
 
-1. Unzip `peer-categories-v1.0.zip` inside the `/wp-content/plugins/` directory for your site
+1. Unzip `peer-categories.zip` inside the `/wp-content/plugins/` directory for your site
 1. Activate the plugin through the 'Plugins' admin menu in WordPress
 1. (optional) Add filters for 'peer_categories' to filter peer category listing
 1. Use the template tag `<?php peer_categories(); ?>` somewhere inside "the loop"
