@@ -1,30 +1,29 @@
 <?php
 
+defined( 'ABSPATH' ) or die();
+
 class Peer_Categories_Test extends WP_UnitTestCase {
 
 	private $cats;
 
-	function setUp() {
+	public function setUp() {
 		parent::setUp();
 
 		$this->create_categories();
 	}
 
-	function tearDown() {
+	public function tearDown() {
 		parent::tearDown();
 
 		remove_filter( 'c2c_get_peer_categories_omit_ancestors', '__return_false' );
 	}
 
 
-
-	/**
-	 *
-	 * HELPER FUNCTIONS
-	 *
-	 */
-
-
+	//
+	//
+	// HELPER FUNCTIONS
+	//
+	//
 
 
 	private function create_categories() {
@@ -75,11 +74,11 @@ class Peer_Categories_Test extends WP_UnitTestCase {
 		return $ret;
 	}
 
-	function get_obj_name( $obj ) {
+	private function get_obj_name( $obj ) {
 		return $obj->name;
 	}
 
-	function assertObjectsEquals( $expected, $actual, $exceptions = array() ) {
+	private function assertObjectsEquals( $expected, $actual, $exceptions = array() ) {
 		if ( ! is_object( $expected ) )
 			$this->fail( "Failed to assert that expected object is an object." );
 
@@ -98,7 +97,7 @@ class Peer_Categories_Test extends WP_UnitTestCase {
 		}
 	}
 
-	function assertObjectArraysEquals( $expected, $actual, $exceptions = array( 'filter', 'object_id' ) ) {
+	private function assertObjectArraysEquals( $expected, $actual, $exceptions = array( 'filter', 'object_id' ) ) {
 		if ( ! is_array( $expected ) )
 			$this->fail( "Failed to assert that expected object is an array." );
 
@@ -113,17 +112,17 @@ class Peer_Categories_Test extends WP_UnitTestCase {
 		}
 	}
 
-	/**
-	 *
-	 * TESTS
-	 *
-	 */
 
+	//
+	//
+	// TESTS
+	//
+	//
 
 
 	/* c2c_get_peer_categories() */
 
-	function test_post_with_all_categories_in_branch_assigned_for_c2c_get_peer_categories() {
+	public function test_post_with_all_categories_in_branch_assigned_for_c2c_get_peer_categories() {
 		$post_id = $this->factory->post->create();
 		wp_set_post_categories( $post_id, array( $this->cats['cat'], $this->cats['cat_1'], $this->cats['cat_1_1'] ) );
 
@@ -136,7 +135,7 @@ class Peer_Categories_Test extends WP_UnitTestCase {
 		$this->assertObjectArraysEquals( $expected, c2c_get_peer_categories( $post_id ) );
 	}
 
-	function test_post_with_mid_level_category_for_c2c_get_peer_categories() {
+	public function test_post_with_mid_level_category_for_c2c_get_peer_categories() {
 		$post_id = $this->factory->post->create();
 		wp_set_post_categories( $post_id, array( $this->cats['cat_2'] ) );
 
@@ -153,7 +152,7 @@ class Peer_Categories_Test extends WP_UnitTestCase {
 	// If cat_2 and cat_2_1 are both directly assigned, cat_2 would get excluded. But if
 	// cat_3 and cat_2_1 are directly assigned (as this basically tests), cat_2 will get included
 	// as a peer to cat_3.
-	function test_post_with_leaf_category_and_non_ancestor_mid_leaf_category_for_c2c_get_peer_categories() {
+	public function test_post_with_leaf_category_and_non_ancestor_mid_leaf_category_for_c2c_get_peer_categories() {
 		$post_id = $this->factory->post->create();
 		wp_set_post_categories( $post_id, array( $this->cats['cat_3'], $this->cats['cat_2_2'] ) );
 
@@ -169,7 +168,7 @@ class Peer_Categories_Test extends WP_UnitTestCase {
 		$this->assertObjectArraysEquals( $expected, c2c_get_peer_categories( $post_id ) );
 	}
 
-	function test_post_with_category_and_its_grandchild_assigned_for_c2c_get_peer_categories() {
+	public function test_post_with_category_and_its_grandchild_assigned_for_c2c_get_peer_categories() {
 		$post_id = $this->factory->post->create();
 		wp_set_post_categories( $post_id, array( $this->cats['cat'], $this->cats['cat_1_1'] ) );
 
@@ -182,7 +181,7 @@ class Peer_Categories_Test extends WP_UnitTestCase {
 		$this->assertObjectArraysEquals( $expected, c2c_get_peer_categories( $post_id ) );
 	}
 
-	function test_post_with_category_and_its_grandchild_assigned_and_ancestors_allowed_for_c2c_get_peer_categories() {
+	public function test_post_with_category_and_its_grandchild_assigned_and_ancestors_allowed_for_c2c_get_peer_categories() {
 		$post_id = $this->factory->post->create();
 		wp_set_post_categories( $post_id, array( $this->cats['cat'], $this->cats['cat_1_1'] ) );
 
@@ -195,7 +194,7 @@ class Peer_Categories_Test extends WP_UnitTestCase {
 		$this->assertObjectArraysEquals( $expected, c2c_get_peer_categories( $post_id, false ) );
 	}
 
-	function test_filter_c2c_get_peer_categories_omit_ancestors() {
+	public function test_filter_c2c_get_peer_categories_omit_ancestors() {
 		add_filter( 'c2c_get_peer_categories_omit_ancestors', '__return_false' );
 
 		$post_id = $this->factory->post->create();
@@ -210,7 +209,7 @@ class Peer_Categories_Test extends WP_UnitTestCase {
 		$this->assertObjectArraysEquals( $expected, c2c_get_peer_categories( $post_id ) );
 	}
 
-	function test_post_with_all_sibling_categories_for_c2c_get_peer_categories() {
+	public function test_post_with_all_sibling_categories_for_c2c_get_peer_categories() {
 		$post_id = $this->factory->post->create();
 		wp_set_post_categories( $post_id, array( $this->cats['cat_3_1'], $this->cats['cat_3_2'], $this->cats['cat_3_3'] ) );
 
@@ -223,7 +222,7 @@ class Peer_Categories_Test extends WP_UnitTestCase {
 		$this->assertObjectArraysEquals( $expected, c2c_get_peer_categories( $post_id ) );
 	}
 
-	function test_post_with_cousin_categories_for_c2c_get_peer_categories() {
+	public function test_post_with_cousin_categories_for_c2c_get_peer_categories() {
 		$post_id = $this->factory->post->create();
 		wp_set_post_categories( $post_id, array( $this->cats['cat_1_1'], $this->cats['cat_2_1'], $this->cats['cat_3_1'] ) );
 
@@ -242,7 +241,7 @@ class Peer_Categories_Test extends WP_UnitTestCase {
 		$this->assertObjectArraysEquals( $expected, c2c_get_peer_categories( $post_id ) );
 	}
 
-	function test_implicit_post_id_for_c2c_get_peer_categories() {
+	public function test_implicit_post_id_for_c2c_get_peer_categories() {
 		$post_id = $this->factory->post->create();
 		wp_set_post_categories( $post_id, array( $this->cats['cat'], $this->cats['cat_1'], $this->cats['cat_1_1'] ) );
 		query_posts( array( 'p' => $post_id ) );
@@ -257,13 +256,13 @@ class Peer_Categories_Test extends WP_UnitTestCase {
 		$this->assertObjectArraysEquals( $expected, apply_filters( 'c2c_get_peer_categories', $post_id ) );
 	}
 
-	function test_post_with_no_categories_for_c2c_get_peer_categories() {
+	public function test_post_with_no_categories_for_c2c_get_peer_categories() {
 		$post_id = $this->factory->post->create();
 
 		$this->assertEmpty( c2c_get_peer_categories( $post_id ) );
 	}
 
-	function test_filter_invocation_for_c2c_get_peer_categories() {
+	public function test_filter_invocation_for_c2c_get_peer_categories() {
 		$post_id = $this->factory->post->create();
 		wp_set_post_categories( $post_id, array( $this->cats['cat'], $this->cats['cat_1'], $this->cats['cat_1_1'] ) );
 
@@ -278,7 +277,7 @@ class Peer_Categories_Test extends WP_UnitTestCase {
 
 	/* c2c_get_peer_categories_list() */
 
-	function test_c2c_get_peer_categories_list() {
+	public function test_c2c_get_peer_categories_list() {
 		$post_id = $this->factory->post->create();
 		wp_set_post_categories( $post_id, array( $this->cats['cat'], $this->cats['cat_1'], $this->cats['cat_1_1'] ) );
 
@@ -287,7 +286,7 @@ class Peer_Categories_Test extends WP_UnitTestCase {
 		$this->assertEquals( $expected, c2c_get_peer_categories_list( '', $post_id ) );
 	}
 
-	function test_custom_separator_for_c2c_get_peer_categories_list() {
+	public function test_custom_separator_for_c2c_get_peer_categories_list() {
 		$post_id = $this->factory->post->create();
 		wp_set_post_categories( $post_id, array( $this->cats['cat_2_1'], $this->cats['cat_3_1'] ) );
 
@@ -299,7 +298,7 @@ class Peer_Categories_Test extends WP_UnitTestCase {
 		$this->assertEquals( $expected, c2c_get_peer_categories_list( ', ', $post_id ) );
 	}
 
-	function test_implicit_post_id_for_c2c_get_peer_categorie_list() {
+	public function test_implicit_post_id_for_c2c_get_peer_categorie_list() {
 		$post_id = $this->factory->post->create();
 		wp_set_post_categories( $post_id, array( $this->cats['cat'], $this->cats['cat_1'], $this->cats['cat_1_1'] ) );
 		query_posts( array( 'p' => $post_id ) );
@@ -310,7 +309,7 @@ class Peer_Categories_Test extends WP_UnitTestCase {
 		$this->assertEquals( $expected, c2c_get_peer_categories_list() );
 	}
 
-	function test_explicit_post_id_for_c2c_get_peer_categories_list() {
+	public function test_explicit_post_id_for_c2c_get_peer_categories_list() {
 		$post_id1 = $this->factory->post->create();
 		wp_set_post_categories( $post_id1, array( $this->cats['cat_1_3'], $this->cats['cat_3_3'] ) );
 		$post_id2 = $this->factory->post->create();
