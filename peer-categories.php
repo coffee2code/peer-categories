@@ -203,7 +203,13 @@ function c2c_get_peer_categories( $post_id = false, $omit_ancestors = true ) {
 		}
 		$peers = array_merge( $peers, $new_peers );
 	}
-	usort( $peers, '_usort_terms_by_name' );
+
+	// Order categories by name.
+	if ( function_exists( 'wp_list_sort' ) ) { // Introduced in WP 4.7
+		$peers = wp_list_sort( $peers, 'name' );
+	} else {
+		usort( $peers, '_usort_terms_by_name' );
+	}
 
 	return $peers;
 }
