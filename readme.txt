@@ -181,6 +181,10 @@ add_filter( 'c2c_get_peer_categories_omit_ancestors', '__return_false' );
 
 == Changelog ==
 
+= () =
+* Change: Update unit test bootstrap
+    * Default `WP_TESTS_DIR` to `/tmp/wordpress-tests-lib` rather than erroring out if not defined via environment variable
+
 = 2.0.3 (2016-02-03) =
 * New: Define 'Text Domain' plugin header attribute.
 * New: Create empty index.php to prevent files from being listed if web server has enabled directory listings.
