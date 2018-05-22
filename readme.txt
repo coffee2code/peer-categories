@@ -5,7 +5,7 @@ Tags: categories, category, peer, sibling, related posts, similar posts, list, t
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Requires at least: 3.6
-Tested up to: 4.7
+Tested up to: 4.9
 Stable tag: 2.0.4
 
 List the categories that are peer (i.e. share the same category parent) to all lowest-level assigned categories for the specified post.
@@ -189,6 +189,7 @@ add_filter( 'c2c_get_peer_categories_omit_ancestors', '__return_false' );
 == Changelog ==
 
 = () =
+* Change: Note compatibility through WP 4.9+
 * Change: Update copyright date (2018)
 
 = 2.0.4 (2017-02-14) =
