@@ -190,6 +190,7 @@ add_filter( 'c2c_get_peer_categories_omit_ancestors', '__return_false' );
 
 = () =
 * New: Add GitHub link to readme
+* Change: Minor whitespace tweaks to unit test bootstrap
 * Change: Rename readme.txt section from 'Filters' to 'Hooks'
 * Change: Modify formatting of hook name in readme to prevent being uppercased when shown in the Plugin Directory
 * Change: Tweak installation instructions
