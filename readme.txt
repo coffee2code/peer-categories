@@ -62,8 +62,8 @@ Links: [Plugin Homepage](http://coffee2code.com/wp-plugins/peer-categories/) | [
 
 1. Install via the built-in WordPress plugin installer. Or download and unzip `peer-categories.zip` inside the plugins directory for your site (typically `wp-content/plugins/`)
 2. Activate the plugin through the 'Plugins' admin menu in WordPress
-3. (optional) Add filters for 'c2c_peer_categories_list' to filter peer category listing
-4. Use the template tag `<?php c2c_peer_categories(); ?>` somewhere inside "the loop"
+3. Optional: Add filters for 'c2c_peer_categories_list' to filter peer category listing
+4. Use the template tag `<?php c2c_peer_categories(); ?>` in a theme template somewhere inside "the loop"
 
 
 == Frequently Asked Questions ==
@@ -192,6 +192,7 @@ add_filter( 'c2c_get_peer_categories_omit_ancestors', '__return_false' );
 * New: Add GitHub link to readme
 * Change: Rename readme.txt section from 'Filters' to 'Hooks'
 * Change: Modify formatting of hook name in readme to prevent being uppercased when shown in the Plugin Directory
+* Change: Tweak installation instructions
 * Change: Note compatibility through WP 4.9+
 * Change: Update copyright date (2018)
 
