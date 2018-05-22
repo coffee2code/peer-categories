@@ -108,7 +108,7 @@ Optional argument. (bool) Should any ancestor categories be omitted from being l
 * (See Description section)
 
 
-== Filters ==
+== Hooks ==
 
 The plugin is further customizable via five hooks. Code using these filters should ideally be put into a mu-plugin or site-specific plugin (which is beyond the scope of this readme to explain). Less ideally, you could put them in your active theme's functions.php file.
 
@@ -190,6 +190,7 @@ add_filter( 'c2c_get_peer_categories_omit_ancestors', '__return_false' );
 
 = () =
 * New: Add GitHub link to readme
+* Change: Rename readme.txt section from 'Filters' to 'Hooks'
 * Change: Note compatibility through WP 4.9+
 * Change: Update copyright date (2018)
 
