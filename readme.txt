@@ -188,6 +188,9 @@ add_filter( 'c2c_get_peer_categories_omit_ancestors', '__return_false' );
 
 == Changelog ==
 
+= () =
+* Change: Update copyright date (2018)
+
 = 2.0.4 (2017-02-14) =
 * Fix: Replace use of deprecated (in WP 4.7) `_usort_terms_by_name()` with `wp_list_sort()` for WP 4.7+
 * Change: Update unit test bootstrap
