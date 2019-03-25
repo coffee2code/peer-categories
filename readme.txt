@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: categories, category, peer, sibling, related posts, similar posts, list, the_category, coffee2code
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
-Requires at least: 3.6
+Requires at least: 4.6
 Tested up to: 5.1
 Stable tag: 2.0.5
 
@@ -191,6 +191,7 @@ add_filter( 'c2c_get_peer_categories_omit_ancestors', '__return_false' );
 = () =
 * Change: Split paragraph in README.md's "Support" section into two
 * Change: Note compatibility through WP 5.1+
+* Change: Drop compatibility with versions of WP older than 4.6
 * Change: Update copyright date (2019)
 * Change: Update License URI to be HTTPS
 
