@@ -193,6 +193,7 @@ add_filter( 'c2c_get_peer_categories_omit_ancestors', '__return_false' );
 * New: Add CHANGELOG.md file and move all but most recent changelog entries into it
 * New: Add inline documentation for hooks
 * Change: Use `apply_filters_deprecated()` to formally deprecate the 'parentless_categories' filter
+* Change: Specify plugin's textdomain to translation calls for strings
 * Change: Cast return value of `c2c_get_peer_categories_omit_ancestors` filter as boolean
 * Change: Use `sprintf()` to produce markup rather than concatenating various strings, function calls, and variables
 * Change: Split paragraph in README.md's "Support" section into two

@@ -100,7 +100,7 @@ function c2c_get_peer_categories_list( $separator = '', $post_id = false ) {
 		/** This filter is documented in peer-categories.php */
 		return apply_filters(
 			'c2c_peer_categories_list',
-			apply_filters_deprecated( 'peer_categories', array( __( 'Uncategorized' ), $separator ), '2.0', 'c2c_peer_categories_list' ),
+			apply_filters_deprecated( 'peer_categories', array( __( 'Uncategorized', 'peer-categories' ), $separator ), '2.0', 'c2c_peer_categories_list' ),
 			$separator,
 			$post_id
 		);
@@ -116,7 +116,7 @@ function c2c_get_peer_categories_list( $separator = '', $post_id = false ) {
 			$thelist .= sprintf(
 				'<a href="%s" title="%s" %s>%s</a></li>',
 				esc_url( get_category_link( $category->term_id ) ),
-				esc_attr( sprintf( __( 'View all posts in %s' ), $category->name ) ),
+				esc_attr( sprintf( __( 'View all posts in %s', 'peer-categories' ), $category->name ) ),
 				$rel,
 				esc_html( $category->name )
 			);
@@ -131,7 +131,7 @@ function c2c_get_peer_categories_list( $separator = '', $post_id = false ) {
 			$thelist .= sprintf(
 				'<a href="%s" title="%s" %s>%s</a>',
 				esc_url( get_category_link( $category->term_id ) ),
-				esc_attr( sprintf( __( 'View all posts in %s' ), $category->name ) ),
+				esc_attr( sprintf( __( 'View all posts in %s', 'peer-categories' ), $category->name ) ),
 				$rel,
 				esc_html( $category->name )
 			);
