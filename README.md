@@ -20,7 +20,9 @@ See [readme.txt](https://github.com/coffee2code/peer-categories/blob/master/read
 
 ## Support
 
-Commercial support and custom development are not presently available. You can raise an [issue](https://github.com/coffee2code/peer-categories/issues) on GitHub or post in the [plugin's support forum on WordPress.org](https://wordpress.org/support/plugin/peer-categories/). If the plugin has been of benefit to you, how about [submitting a review](https://wordpress.org/support/plugin/peer-categories/reviews/) for it in the WordPress Plugin Directory or considering a [donation](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=6ARCFJ9TX3522)?
+Commercial support and custom development are not presently available. You can raise an [issue](https://github.com/coffee2code/peer-categories/issues) on GitHub or post in the [plugin's support forum on WordPress.org](https://wordpress.org/support/plugin/peer-categories/).
+
+If the plugin has been of benefit to you, how about [submitting a review](https://wordpress.org/support/plugin/peer-categories/reviews/) for it in the WordPress Plugin Directory or considering a [donation](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=6ARCFJ9TX3522)?
 
 
 ## License
