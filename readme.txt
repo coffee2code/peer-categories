@@ -189,6 +189,7 @@ add_filter( 'c2c_get_peer_categories_omit_ancestors', '__return_false' );
 == Changelog ==
 
 = () =
+* Change: Update copyright date (2019)
 * Change: Update License URI to be HTTPS
 
 = 2.0.5 (2018-05-21) =
