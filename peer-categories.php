@@ -113,9 +113,13 @@ function c2c_get_peer_categories_list( $separator = '', $post_id = false ) {
 		$thelist .= '<ul class="post-categories">';
 		foreach ( $categories as $category ) {
 			$thelist .= "\n\t<li>";
-			$thelist .= '<a href="' . get_category_link( $category->term_id ) . '" title="' .
-					sprintf( __( 'View all posts in %s' ), $category->name ) . '" ' .
-					$rel . '>' . $category->cat_name . '</a></li>';
+			$thelist .= sprintf(
+				'<a href="%s" title="%s" %s>%s</a></li>',
+				esc_url( get_category_link( $category->term_id ) ),
+				esc_attr( sprintf( __( 'View all posts in %s' ), $category->name ) ),
+				$rel,
+				esc_html( $category->name )
+			);
 		}
 		$thelist .= '</ul>';
 	} else {
@@ -124,9 +128,13 @@ function c2c_get_peer_categories_list( $separator = '', $post_id = false ) {
 			if ( 0 < $i ) {
 				$thelist .= $separator;
 			}
-			$thelist .= '<a href="' . get_category_link( $category->term_id ) . '" title="' .
-					sprintf( __( 'View all posts in %s' ), $category->name ) . '" ' .
-					$rel . '>' . $category->name.'</a>';
+			$thelist .= sprintf(
+				'<a href="%s" title="%s" %s>%s</a>',
+				esc_url( get_category_link( $category->term_id ) ),
+				esc_attr( sprintf( __( 'View all posts in %s' ), $category->name ) ),
+				$rel,
+				esc_html( $category->name )
+			);
 			++$i;
 		}
 	}
