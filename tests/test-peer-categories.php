@@ -95,6 +95,8 @@ class Peer_Categories_Test extends WP_UnitTestCase {
 			if ( $val != $actual->$prop )
 				$this->fail( "Failed to assert that '{$actual->$prop}' matches '{$val}' for property '$prop'.");
 		}
+
+		$this->assertTrue( true );
 	}
 
 	private function assertObjectArraysEquals( $expected, $actual, $exceptions = array( 'filter', 'object_id' ) ) {
