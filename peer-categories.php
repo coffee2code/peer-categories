@@ -7,7 +7,7 @@
  * Author URI:  http://coffee2code.com/
  * Text Domain: peer-categories
  * License:     GPLv2 or later
- * License URI: http://www.gnu.org/licenses/gpl-2.0.html
+ * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  * Description: List the categories that are peer (i.e. share the same category parent) to all lowest-level assigned categories for the specified post.
  *
  * Compatible with WordPress 3.6 through 4.9+.

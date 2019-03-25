@@ -3,7 +3,7 @@ Contributors: coffee2code
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=6ARCFJ9TX3522
 Tags: categories, category, peer, sibling, related posts, similar posts, list, the_category, coffee2code
 License: GPLv2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Requires at least: 3.6
 Tested up to: 4.9
 Stable tag: 2.0.5
@@ -187,6 +187,9 @@ add_filter( 'c2c_get_peer_categories_omit_ancestors', '__return_false' );
 
 
 == Changelog ==
+
+= () =
+* Change: Update License URI to be HTTPS
 
 = 2.0.5 (2018-05-21) =
 * New: Add README.md
