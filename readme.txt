@@ -192,6 +192,7 @@ add_filter( 'c2c_get_peer_categories_omit_ancestors', '__return_false' );
 * New: Check that the post's post type supports categories before attempting to list any (and if it doesn't, apply `c2c_peer_categories_list` filter against empty string)
 * New: Add CHANGELOG.md file and move all but most recent changelog entries into it
 * New: Add inline documentation for hooks
+* Change: Use `apply_filters_deprecated()` to formally deprecate the 'parentless_categories' filter
 * Change: Cast return value of `c2c_get_peer_categories_omit_ancestors` filter as boolean
 * Change: Split paragraph in README.md's "Support" section into two
 * Change: Note compatibility through WP 5.1+

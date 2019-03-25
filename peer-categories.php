@@ -100,7 +100,7 @@ function c2c_get_peer_categories_list( $separator = '', $post_id = false ) {
 		/** This filter is documented in peer-categories.php */
 		return apply_filters(
 			'c2c_peer_categories_list',
-			apply_filters( 'peer_categories', __( 'Uncategorized' ), $separator ), // Deprecated as of v2.0
+			apply_filters_deprecated( 'peer_categories', array( __( 'Uncategorized' ), $separator ), '2.0', 'c2c_peer_categories_list' ),
 			$separator,
 			$post_id
 		);
@@ -134,7 +134,7 @@ function c2c_get_peer_categories_list( $separator = '', $post_id = false ) {
 	/** This filter is documented in peer-categories.php */
 	return apply_filters(
 		'c2c_peer_categories_list',
-		apply_filters( 'peer_categories', $thelist, $separator ), // Deprecated as of v2.0
+		apply_filters_deprecated( 'peer_categories', array( $thelist, $separator), '2.0', 'c2c_peer_categories_list' ),
 		$separator,
 		$post_id
 	);
