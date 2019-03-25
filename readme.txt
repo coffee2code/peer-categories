@@ -196,6 +196,7 @@ add_filter( 'c2c_get_peer_categories_omit_ancestors', '__return_false' );
 * Change: Specify plugin's textdomain to translation calls for strings
 * Change: Cast return value of `c2c_get_peer_categories_omit_ancestors` filter as boolean
 * Change: Use `sprintf()` to produce markup rather than concatenating various strings, function calls, and variables
+* Change: Minor refactor to reduce duplication of code
 * Change: Split paragraph in README.md's "Support" section into two
 * Change: Note compatibility through WP 5.1+
 * Change: Drop compatibility with versions of WP older than 4.6
