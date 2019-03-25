@@ -1,5 +1,21 @@
 # Changelog
 
+## 2.1 _(2019-03-25)_
+* New: Check that the post's post type supports categories before attempting to list any (and if it doesn't, apply `c2c_peer_categories_list` filter against empty string)
+* New: Add CHANGELOG.md file and move all but most recent changelog entries into it
+* New: Add inline documentation for hooks
+* Change: Use `apply_filters_deprecated()` to formally deprecate the 'parentless_categories' filter
+* Change: Specify plugin's textdomain to translation calls for strings
+* Change: Cast return value of `c2c_get_peer_categories_omit_ancestors` filter as boolean
+* Change: Use `sprintf()` to produce markup rather than concatenating various strings, function calls, and variables
+* Change: Minor refactor to reduce duplication of code
+* Change: Unit tests: Add affirmative assertion at end of `assertObjectsEquals()` to ensure an assertion is registered on success
+* Change: Split paragraph in README.md's "Support" section into two
+* Change: Note compatibility through WP 5.1+
+* Change: Drop compatibility with versions of WP older than 4.6
+* Change: Update copyright date (2019)
+* Change: Update License URI to be HTTPS
+
 ## 2.0.5 _(2018-05-21)_
 * New: Add README.md
 * New: Add GitHub link to readme

@@ -6,7 +6,7 @@ License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Requires at least: 4.6
 Tested up to: 5.1
-Stable tag: 2.0.5
+Stable tag: 2.1
 
 List the categories that are peer (i.e. share the same category parent) to all lowest-level assigned categories for the specified post.
 
@@ -188,7 +188,7 @@ add_filter( 'c2c_get_peer_categories_omit_ancestors', '__return_false' );
 
 == Changelog ==
 
-= () =
+= 2.1 (2019-03-25) =
 * New: Check that the post's post type supports categories before attempting to list any (and if it doesn't, apply `c2c_peer_categories_list` filter against empty string)
 * New: Add CHANGELOG.md file and move all but most recent changelog entries into it
 * New: Add inline documentation for hooks
@@ -228,6 +228,9 @@ _Full changelog is available in [CHANGELOG.md](https://github.com/coffee2code/pe
 
 
 == Upgrade Notice ==
+
+= 2.1 =
+Minor update: checked for post type's support of categories, created CHANGELOG.md to store historical changelog outside of readme.txt, noted compatibility through WP 5.1+, updated copyright date (2019), and minor code improvements
 
 = 2.0.5 =
 Trivial update: noted compatibility through WP 4.9+, added README.md for GitHub, updated copyright date (2018), and other minor changes
