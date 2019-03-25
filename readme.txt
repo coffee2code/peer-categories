@@ -189,6 +189,7 @@ add_filter( 'c2c_get_peer_categories_omit_ancestors', '__return_false' );
 == Changelog ==
 
 = () =
+* New: Add CHANGELOG.md file and move all but most recent changelog entries into it
 * New: Add inline documentation for hooks
 * Change: Cast return value of `c2c_get_peer_categories_omit_ancestors` filter as boolean
 * Change: Split paragraph in README.md's "Support" section into two
@@ -217,88 +218,7 @@ add_filter( 'c2c_get_peer_categories_omit_ancestors', '__return_false' );
 * Change: Update copyright date (2017)
 * New: Add LICENSE file
 
-= 2.0.3 (2016-02-03) =
-* New: Define 'Text Domain' plugin header attribute.
-* New: Create empty index.php to prevent files from being listed if web server has enabled directory listings.
-* Change: Minor reformatting and improvements to internal code documentation.
-* Change: Explicitly declare methods in unit tests as public.
-* Change: Note compatibility through WP 4.4+.
-* Change: Update copyright date (2016).
-
-= 2.0.2 (2015-02-11) =
-* Note compatibility through WP 4.1+
-* Update copyright date (2015)
-
-= 2.0.1 (2014-08-30) =
-* Minor plugin header reformatting
-* Add check to prevent execution of code if file is directly accessed
-* Change documentation links to wp.org to be https
-* Note compatibility through WP 4.0+
-* Add plugin icon
-
-= 2.0 (2014-01-09) =
-* Add c2c_peer_categories()
-* Deprecate peer_categories() in favor of c2c_peer_categories()
-* Change default behavior of c2c_peer_categories() to omit all ancestor categories by default, instead of just directly assigned categories
-* Add optional arg $omit_ancestors to c2c_peer_categories() only omitting direct parent categories and not all ancestor categories
-* Add filter 'c2c_get_peer_categories_omit_ancestors'
-* Add filter 'c2c_peer_categories' to support filter invocation method c2c_peer_categories()
-* Add c2c_get_peer_categories_list()
-* Deprecate get_peer_categories_list() in favor of c2c_get_peer_categories_list()
-* Add filter 'c2c_get_peer_categories_list' to support filter invocation method c2c_get_peer_categories_list()
-* Add c2c_get_peer_categories()
-* Deprecate get_peer_categories() in favor of c2c_get_peer_categories()
-* Add filter 'c2c_get_peer_categories' to support filter invocation method c2c_get_peer_categories()
-* Add filter 'c2c_peer_categories_list' (which also passes $post_id to the hook)
-* Deprecate filter 'peer_categories' in favor of 'c2c_peer_categories_list'
-* Fix to use 'parent' instead of 'child_of' in get_categories() calls so only children categories are obtained
-* Remove harcoded space added after custom separator in c2c_get_peer_categories_list()
-* Add unit tests
-* Add Filters section to readme.txt to document all filters
-* Note compatibility through WP 3.8+
-* Drop compatibility with versions of WP older than 3.6
-* Update copyright date (2014)
-* Code and documentation reformatting (spacing, bracing)
-* Change donate link
-* Add banner image
-
-= 1.1.5 =
-* Note compatibility through WP 3.5+
-* Update copyright date (2013)
-
-= 1.1.4 =
-* Re-license as GPLv2 or later (from X11)
-* Add 'License' and 'License URI' header tags to readme.txt and plugin file
-* Remove ending PHP close tag
-* Note compatibility through WP 3.4+
-
-= 1.1.3 =
-* Note compatibility through WP 3.3+
-* Add link to plugin directory page to readme.txt
-* Update copyright date (2012)
-
-= 1.1.2 =
-* Note compatibility through WP 3.2+
-* Minor documentation reformatting in readme.txt
-* Fix plugin homepage and author links in description in readme.txt
-
-= 1.1.1 =
-* Note compatibility with WP 3.1+
-* Update copyright date (2011)
-
-= 1.1 =
-* Wrap all functions in if (!function_exists()) check
-* Remove docs from top of plugin file (all that and more are in readme.txt)
-* Note compatibility with WP 2.9+, 3.0+
-* Add PHPDoc documentation
-* Minor tweaks to code formatting (spacing)
-* Add package info to top of plugin file
-* Add Changelog, Template Tags, and Upgrade Notice sections to readme.txt
-* Update copyright date
-* Remove trailing whitespace
-
-= 1.0 =
-* Initial release
+_Full changelog is available in [CHANGELOG.md](https://github.com/coffee2code/peer-categories/blob/master/CHANGELOG.md)._
 
 
 == Upgrade Notice ==
