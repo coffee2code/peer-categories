@@ -189,6 +189,7 @@ add_filter( 'c2c_get_peer_categories_omit_ancestors', '__return_false' );
 == Changelog ==
 
 = () =
+* New: Check that the post's post type supports categories before attempting to list any (and if it doesn't, apply `c2c_peer_categories_list` filter against empty string)
 * New: Add CHANGELOG.md file and move all but most recent changelog entries into it
 * New: Add inline documentation for hooks
 * Change: Cast return value of `c2c_get_peer_categories_omit_ancestors` filter as boolean

@@ -83,19 +83,26 @@ if ( ! function_exists( 'c2c_get_peer_categories_list' ) ) :
 function c2c_get_peer_categories_list( $separator = '', $post_id = false ) {
 	global $wp_rewrite;
 
-	$categories = c2c_get_peer_categories( $post_id );
-
-	if ( empty( $categories ) ) {
+	// Check if post's post ype supports categories.
+	if ( ! is_object_in_taxonomy( get_post_type( $post_id ), 'category' ) ) {
 		/**
-		 * Filters the HTML formatted list of peer categories.
+		 * Filters the HTML formatted list of parentless categories.
 		 *
 		 * @since 2.0
 		 *
 		 * @param string $thelist   The HTML-formatted list of categories, or
 		 *                          `__( 'Uncategorized' )` if the post didn't have
-		 *                          any categories.
+		 *                          any categories, or an empty string if the post's
+		 *                          post type doesn't support categories.
 		 * @param string $separator String to use as the separator.
 		 */
+		return apply_filters( 'c2c_peer_categories_list', '', $separator, $post_id );
+	}
+
+	$categories = c2c_get_peer_categories( $post_id );
+
+	if ( empty( $categories ) ) {
+		/** This filter is documented in peer-categories.php */
 		return apply_filters(
 			'c2c_peer_categories_list',
 			apply_filters( 'peer_categories', __( 'Uncategorized' ), $separator ), // Deprecated as of v2.0
