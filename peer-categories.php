@@ -16,11 +16,6 @@
  * =>> Also, visit the plugin's homepage for additional information and updates.
  * =>> Or visit: https://wordpress.org/plugins/peer-categories/
  *
- * TODO:
- * * Prefix function wit 'c2c_' and deprecate existing versions
- * * Support filter invocation approach via add_filter( 'peer_categories', 'peer_categories', 10, 2 );
- * * Document previously mentioned filters
- *
  * @package Peer_Categories
  * @author  Scott Reilly
  * @version 2.0.5
