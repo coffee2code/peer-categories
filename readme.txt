@@ -189,6 +189,7 @@ add_filter( 'c2c_get_peer_categories_omit_ancestors', '__return_false' );
 == Changelog ==
 
 = () =
+* New: Add inline documentation for hooks
 * Change: Split paragraph in README.md's "Support" section into two
 * Change: Note compatibility through WP 5.1+
 * Change: Drop compatibility with versions of WP older than 4.6

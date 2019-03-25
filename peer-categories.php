@@ -86,6 +86,16 @@ function c2c_get_peer_categories_list( $separator = '', $post_id = false ) {
 	$categories = c2c_get_peer_categories( $post_id );
 
 	if ( empty( $categories ) ) {
+		/**
+		 * Filters the HTML formatted list of peer categories.
+		 *
+		 * @since 2.0
+		 *
+		 * @param string $thelist   The HTML-formatted list of categories, or
+		 *                          `__( 'Uncategorized' )` if the post didn't have
+		 *                          any categories.
+		 * @param string $separator String to use as the separator.
+		 */
 		return apply_filters(
 			'c2c_peer_categories_list',
 			apply_filters( 'peer_categories', __( 'Uncategorized' ), $separator ), // Deprecated as of v2.0
@@ -119,6 +129,7 @@ function c2c_get_peer_categories_list( $separator = '', $post_id = false ) {
 		}
 	}
 
+	/** This filter is documented in peer-categories.php */
 	return apply_filters(
 		'c2c_peer_categories_list',
 		apply_filters( 'peer_categories', $thelist, $separator ), // Deprecated as of v2.0
@@ -158,6 +169,16 @@ function c2c_get_peer_categories( $post_id = false, $omit_ancestors = true ) {
 
 	$peers = $parents = array();
 
+	/**
+	 * Filters if ancestor categories of all directly assigned categories (even if
+	 * directly assigned themselves) should be omitted from the return list of
+	 * categories.
+	 *
+	 * @since
+	 *
+	 * @param bool $omit_ancestors Prevent any ancestors from also being listed,
+	 *                             not just immediate parents? Default true.
+	 */
 	$omit_ancestors = apply_filters( 'c2c_get_peer_categories_omit_ancestors', $omit_ancestors );
 
 	// Go through all categories and get, then filter out, parents.
