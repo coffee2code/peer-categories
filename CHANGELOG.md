@@ -3,6 +3,7 @@
 ## _(in-progress)_
 * Change: Update unit test install script and bootstrap to use latest WP unit test repo
 * Change: Note compatibility through WP 5.2+
+* Fix: Fix minor typos in README.md
 
 ## 2.1 _(2019-03-25)_
 * New: Check that the post's post type supports categories before attempting to list any (and if it doesn't, apply `c2c_peer_categories_list` filter against empty string)

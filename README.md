@@ -9,13 +9,13 @@ This plugin is available in the WordPress Plugin Directory: https://wordpress.or
 
 1. Install via the built-in WordPress plugin installer. Or install the plugin code inside the plugins directory for your site (typically `/wp-content/plugins/`).
 2. Activate the plugin through the 'Plugins' admin menu in WordPress.
-3. Optional: Add filters for `c2c_peer_categories_list`` to filter peer category listing.
+3. Optional: Add filters for `c2c_peer_categories_list` to filter peer category listing.
 4. Use the template tag `<?php c2c_peer_categories(); ?>` in a theme template somewhere inside "the loop".
 
 
 ## Additional Documentation
 
-See [readme.txt](https://github.com/coffee2code/peer-categories/blob/master/readme.txt) for additional usage information.  See [CHANGELOG.md](CHANGELOG.md) for the list of changes for each release.
+See [readme.txt](https://github.com/coffee2code/peer-categories/blob/master/readme.txt) for additional usage information. See [CHANGELOG.md](CHANGELOG.md) for the list of changes for each release.
 
 
 ## Support
