@@ -6,7 +6,7 @@ License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Requires at least: 4.6
 Tested up to: 5.3
-Stable tag: 2.1.1
+Stable tag: 2.1.2
 
 List the categories that are peer (i.e. share the same category parent) to all lowest-level assigned categories for the specified post.
 
@@ -188,6 +188,10 @@ add_filter( 'c2c_get_peer_categories_omit_ancestors', '__return_false' );
 
 == Changelog ==
 
+= 2.1.2 (2019-11-24) =
+* Change: Note compatibility through WP 5.3+
+* Change: Update copyright date (2020)
+
 = 2.1.1 (2019-06-22) =
 * Change: Update unit test install script and bootstrap to use latest WP unit test repo
 * Change: Note compatibility through WP 5.2+
@@ -209,20 +213,13 @@ add_filter( 'c2c_get_peer_categories_omit_ancestors', '__return_false' );
 * Change: Update copyright date (2019)
 * Change: Update License URI to be HTTPS
 
-= 2.0.5 (2018-05-21) =
-* New: Add README.md
-* New: Add GitHub link to readme
-* Change: Minor whitespace tweaks to unit test bootstrap
-* Change: Rename readme.txt section from 'Filters' to 'Hooks'
-* Change: Modify formatting of hook name in readme to prevent being uppercased when shown in the Plugin Directory
-* Change: Tweak installation instructions
-* Change: Note compatibility through WP 4.9+
-* Change: Update copyright date (2018)
-
 _Full changelog is available in [CHANGELOG.md](https://github.com/coffee2code/peer-categories/blob/master/CHANGELOG.md)._
 
 
 == Upgrade Notice ==
+
+= 2.1.2 =
+Trivial update: noted compatibility through WP 5.3+ and updated copyright date (2020)
 
 = 2.1.1 =
 Trivial update: modernized unit tests and noted compatibility through WP 5.2+
