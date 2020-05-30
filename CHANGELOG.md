@@ -4,6 +4,7 @@
 * Change: Use HTTPS for link to WP SVN repository in bin script for configuring unit tests
 * Change: Note compatibility through WP 5.4+
 * Change: Update links to coffee2code.com to be HTTPS
+* Change: Update URLs used in examples and docs to be HTTPS and refer to proper example domain where appropriate
 * Change: Unit tests: Remove unnecessary unregistering of hooks and thusly delete `tearDown()`
 
 ## 2.1.2 _(2019-11-24)_

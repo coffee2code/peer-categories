@@ -45,15 +45,15 @@ Example usage (based on preceding example):
 
 Outputs something like:
 
-`<ul><li><a href="http://yourblog.com/category/fruiting/bell-pepper">Bell Pepper</a></li>
-<li><a href="http://yourblog.com/category/fruiting/cucumber">Cucumber</a></li>
-<li><a href="http://yourblog.com/category/fruiting/pumpkin">Pumpkin</a></li></ul>`
+`<ul><li><a href="https://example.com/category/fruiting/bell-pepper">Bell Pepper</a></li>
+<li><a href="https://example.com/category/fruiting/cucumber">Cucumber</a></li>
+<li><a href="https://example.com/category/fruiting/pumpkin">Pumpkin</a></li></ul>`
 
 * `<?php c2c_peer_categories( ',' ); ?></ul>`
 
 Outputs something like:
 
-`<a href="http://yourblog.com/category/fruiting/bell-pepper">Bell Pepper</a>, <a href="http://yourblog.com/category/fruiting/cucumber">Cucumber</a>, <a href="http://yourblog.com/category/fruiting/pumpkin">Pumpkin</a>`
+`<a href="https://example.com/category/fruiting/bell-pepper">Bell Pepper</a>, <a href="https://example.com/category/fruiting/cucumber">Cucumber</a>, <a href="https://example.com/category/fruiting/pumpkin">Pumpkin</a>`
 
 Links: [Plugin Homepage](https://coffee2code.com/wp-plugins/peer-categories/) | [Plugin Directory Page](https://wordpress.org/plugins/peer-categories/) | [GitHub](https://github.com/coffee2code/peer-categories/) | [Author Homepage](https://coffee2code.com)
 
