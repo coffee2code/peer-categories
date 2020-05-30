@@ -6,7 +6,7 @@ License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Requires at least: 4.6
 Tested up to: 5.4
-Stable tag: 2.1.2
+Stable tag: 2.1.3
 
 List the categories that are peer (i.e. share the same category parent) to all lowest-level assigned categories for the specified post.
 
@@ -188,6 +188,14 @@ add_filter( 'c2c_get_peer_categories_omit_ancestors', '__return_false' );
 
 == Changelog ==
 
+= 2.1.3 (2020-05-30) =
+* New: Add TODO.md with some new items listed
+* Change: Use HTTPS for link to WP SVN repository in bin script for configuring unit tests
+* Change: Note compatibility through WP 5.4+
+* Change: Update links to coffee2code.com to be HTTPS
+* Change: Update URLs used in examples and docs to be HTTPS and refer to proper example domain where appropriate
+* Change: Unit tests: Remove unnecessary unregistering of hooks and thusly delete `tearDown()`
+
 = 2.1.2 (2019-11-24) =
 * Change: Note compatibility through WP 5.3+
 * Change: Update copyright date (2020)
@@ -197,26 +205,13 @@ add_filter( 'c2c_get_peer_categories_omit_ancestors', '__return_false' );
 * Change: Note compatibility through WP 5.2+
 * Fix: Fix minor typos in README.md
 
-= 2.1 (2019-03-25) =
-* New: Check that the post's post type supports categories before attempting to list any (and if it doesn't, apply `c2c_peer_categories_list` filter against empty string)
-* New: Add CHANGELOG.md file and move all but most recent changelog entries into it
-* New: Add inline documentation for hooks
-* Change: Use `apply_filters_deprecated()` to formally deprecate the 'parentless_categories' filter
-* Change: Specify plugin's textdomain to translation calls for strings
-* Change: Cast return value of `c2c_get_peer_categories_omit_ancestors` filter as boolean
-* Change: Use `sprintf()` to produce markup rather than concatenating various strings, function calls, and variables
-* Change: Minor refactor to reduce duplication of code
-* Change: Unit tests: Add affirmative assertion at end of `assertObjectsEquals()` to ensure an assertion is registered on success
-* Change: Split paragraph in README.md's "Support" section into two
-* Change: Note compatibility through WP 5.1+
-* Change: Drop compatibility with versions of WP older than 4.6
-* Change: Update copyright date (2019)
-* Change: Update License URI to be HTTPS
-
 _Full changelog is available in [CHANGELOG.md](https://github.com/coffee2code/peer-categories/blob/master/CHANGELOG.md)._
 
 
 == Upgrade Notice ==
+
+= 2.1.3 =
+Trivial update: Added TODO.md file, updated a few URLs to be HTTPS, and noted compatibility through WP 5.4+
 
 = 2.1.2 =
 Trivial update: noted compatibility through WP 5.3+ and updated copyright date (2020)
