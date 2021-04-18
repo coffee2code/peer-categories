@@ -6,7 +6,7 @@ License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Requires at least: 4.6
 Tested up to: 5.7
-Stable tag: 2.1.4
+Stable tag: 2.1.5
 
 List the categories that are peer (i.e. share the same category parent) to all lowest-level assigned categories for the specified post.
 
@@ -188,6 +188,10 @@ add_filter( 'c2c_get_peer_categories_omit_ancestors', '__return_false' );
 
 == Changelog ==
 
+= 2.1.5 (2021-04-17) =
+* Change: Note compatibility through WP 5.7+
+* Change: Update copyright date (2021)
+
 = 2.1.4 (2020-09-05) =
 * Change: Restructure unit test file structure
     * New: Create new subdirectory `phpunit/` to house all files related to unit testing
@@ -205,14 +209,13 @@ add_filter( 'c2c_get_peer_categories_omit_ancestors', '__return_false' );
 * Change: Update URLs used in examples and docs to be HTTPS and refer to proper example domain where appropriate
 * Change: Unit tests: Remove unnecessary unregistering of hooks and thusly delete `tearDown()`
 
-= 2.1.2 (2019-11-24) =
-* Change: Note compatibility through WP 5.3+
-* Change: Update copyright date (2020)
-
 _Full changelog is available in [CHANGELOG.md](https://github.com/coffee2code/peer-categories/blob/master/CHANGELOG.md)._
 
 
 == Upgrade Notice ==
+
+= 2.1.5 =
+Trivial update: noted compatibility through WP 5.7+ and updated copyright date (2021)
 
 = 2.1.4 =
 Trivial update: Restructured unit test file structure and noted compatibility through WP 5.5+.
