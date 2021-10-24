@@ -77,113 +77,24 @@ If an assigned category is the parent for one or more other assigned categories 
 Yes.
 
 
-== Template Tags ==
+== Developer Documentation ==
 
-The plugin provides three optional template tag for use in your theme templates.
+Developer documentation can be found in [DEVELOPER-DOCS.md](https://github.com/coffee2code/peer-categories/blob/master/DEVELOPER-DOCS.md). That documentation covers the template tags and hooks provided by the plugin.
 
-= Functions =
+As an overview, these are the template tags provided by the plugin:
 
-* `<?php function c2c_peer_categories( $separator = '', $post_id = false ) ?>`
-Outputs the peer categories.
+* `c2c_peer_categories()`          : Outputs the peer categories.
+* `c2c_get_peer_categories_list()` : Returns the list of peer categories.
+* `c2c_get_peer_categories()`      : Returns the list of peer categories for the specified post.
 
-* `<?php function c2c_get_peer_categories_list( $separator = '', $post_id = false ) ?>`
-Gets the list of peer categories.
+These are the hooks provided by the plugin:
 
-* `<?php function c2c_get_peer_categories( $post_id = false, $omit_ancestors = true ) ?>`
-Returns the list of peer categories for the specified post.
-
-= Arguments =
-
-* `$separator`
-Optional argument. (string) String to use as the separator.
-
-* `$post_id`
-Optional argument. (int) Post ID. If 'false', then the current post is assumed. Default is 'false'.
-
-* `$omit_ancestors`
-Optional argument. (bool) Should any ancestor categories be omitted from being listed? If false, then only categories that are directly assigned to another directly assigned category are omitted. Default is 'true'.
-
-= Examples =
-
-* (See Description section)
-
-
-== Hooks ==
-
-The plugin is further customizable via five hooks. Code using these filters should ideally be put into a mu-plugin or site-specific plugin (which is beyond the scope of this readme to explain). Less ideally, you could put them in your active theme's functions.php file.
-
-**c2c_peer_categories (action), c2c_get_peer_categories_list, c2c_get_peer_categories (filters)**
-
-These actions and filters allow you to use an alternative approach to safely invoke each of the identically named function in such a way that if the plugin were deactivated or deleted, then your calls to the functions won't cause errors on your site.
-
-Arguments:
-
-* (see respective functions)
-
-Example:
-
-Instead of:
-
-`<?php c2c_peer_categories( ',' ); ?>`
-or
-`<?php $peers = c2c_get_peer_categories( $post_id ); ?>`
-
-Do (respectively):
-
-`<?php do_action( 'c2c_peer_categories', ',' ); ?>`
-or
-`<?php $peers = apply_filters( 'c2c_get_peer_categories', $post_id ); ?>`
-
-**c2c_peer_categories_list (filter)**
-
-The 'c2c_peer_categories_list' filter allows you to customize or override the return value of the of `c2c_peer_categories_list()` function.
-
-Arguments:
-
-* string    $thelist   : the HTML-formatted list of categories, `__( 'Uncategorized' )` if the post didn't have any categories, or an empty string if the post's post type doesn't support categories
-* string    $separator : the separator specified by the user, or '' if not specified
-* int|false $post_id   : the ID of the post, or false to indicate the current post
-
-Example:
-
-`
-/**
- * Amend comma-separated peer categories listing with a special string.
- *
- * @param  string $thelist The peer categories list.
- * @param  string $separator Optional. String to use as the separator.
- * @return string
- */
-function c2c_peer_categories_list( $thelist, $separator ) {
-	// If not categorized, do nothing
-	if ( __( 'Uncategorized' ) == $thelist ) {
-		return $thelist;
-	}
-
-	// Add a message after a comma separated listing.
-	if ( ',' == $separator ) {
-		$thelist .= " (* not all assigned categories are being listed)";
-	}
-
-	return $thelist;
-}
-add_filter( 'c2c_peer_categories_list', 'customize_c2c_peer_categories_list' );
-`
-
-**c2c_get_peer_categories_omit_ancestors (filter)**
-
-The 'c2c_get_peer_categories_omit_ancestors' filter allows you to customize or override the function argument indicating if ancestor categories of all directly assigned categories (even if directly assigned themselves) should be omitted from the return list of categories. By default, this argument is true.
-
-Arguments:
-
-* bool $omit_ancestors : the $omit_categories argument sent to the function, otherwise implicitly assumed to be the default
-
-Example:
-
-`
-// Don't omit ancestors unless they are the immediate parent of an assigned category
-add_filter( 'c2c_get_peer_categories_omit_ancestors', '__return_false' );
-`
+* `c2c_peer_categories` _(action)_, `c2c_get_peer_categories_list`, `c2c_get_peer_categories` _(filters)_ :
+Allows for an alternative approach to safely invoke each of the identically named functions in such a way that if the plugin were deactivated or deleted, then your calls to the functions won't cause errors on your site.
+* `c2c_peer_categories_list` _(filter)_ :
+Customizes the return value of the `c2c_peer_categories_list()` function.
+* `c2c_get_peer_categories_omit_ancestors` _(filter)_ :
+Customizes the function argument indicating if ancestor categories of all directly assigned categories (even if directly assigned themselves) should be omitted from the return list of categories.
 
 
 == Changelog ==
