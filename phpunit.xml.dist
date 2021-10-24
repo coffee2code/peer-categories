@@ -8,7 +8,7 @@
 	>
 	<testsuites>
 		<testsuite name="peer-categories">
-			<directory prefix="test-" suffix=".php">./tests/phpunit/tests/</directory>
+			<directory suffix=".php">./tests/phpunit/tests/</directory>
 		</testsuite>
 	</testsuites>
 </phpunit>
