@@ -1,6 +1,7 @@
 # Changelog
 
 ## _(in-progress)_
+* Change: Remove long-deprecated functions `peer_categories()`, `get_peer_categories_list()`, and `get_peer_categories()`
 * New: Add DEVELOPER-DOCS.md and move template tag and hooks documentation into it
 * Change: Tweak installation instruction
 * Change: Note compatibility through WP 5.8+

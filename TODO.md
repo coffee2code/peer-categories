@@ -6,7 +6,6 @@ The following list comprises ideas, suggestions, and known issues, all of which 
 
 * Should `c2c_get_peer_categories_list()` apply 'the_category_list' filter as `get_the_category_list()` does as of WP 4.4?
 * Add a block
-* Remove deprecated functions
 * Drop pre-WP4.7 support
 * Reword plugin description
 
