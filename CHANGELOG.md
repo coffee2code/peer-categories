@@ -4,6 +4,7 @@
 * New: Add DEVELOPER-DOCS.md and move template tag and hooks documentation into it
 * Change: Tweak installation instruction
 * Change: Note compatibility through WP 5.8+
+* Change: Pare down tags in readme.txt header
 * Unit tests:
     * Change: Restructure unit test directories
         * Change: Move `phpunit/` into `tests/phpunit/`

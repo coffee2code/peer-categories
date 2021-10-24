@@ -1,7 +1,7 @@
 === Peer Categories ===
 Contributors: coffee2code
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=6ARCFJ9TX3522
-Tags: categories, category, peer, sibling, related posts, similar posts, list, the_category, coffee2code
+Tags: category, sibling, related posts, the_category, coffee2code
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Requires at least: 4.6
