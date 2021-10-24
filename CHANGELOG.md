@@ -1,6 +1,7 @@
 # Changelog
 
 ## _(in-progress)_
+* Change: Tweak installation instruction
 * Change: Note compatibility through WP 5.8+
 * Unit tests:
     * Change: Restructure unit test directories

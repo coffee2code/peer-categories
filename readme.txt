@@ -60,7 +60,7 @@ Links: [Plugin Homepage](https://coffee2code.com/wp-plugins/peer-categories/) | 
 
 == Installation ==
 
-1. Install via the built-in WordPress plugin installer. Or download and unzip `peer-categories.zip` inside the plugins directory for your site (typically `wp-content/plugins/`)
+1. Install via the built-in WordPress plugin installer. Or install the plugin code inside the plugins directory for your site (typically `/wp-content/plugins/`).
 2. Activate the plugin through the 'Plugins' admin menu in WordPress
 3. Optional: Add filters for 'c2c_peer_categories_list' to filter peer category listing
 4. Use the template tag `<?php c2c_peer_categories(); ?>` in a theme template somewhere inside "the loop"
