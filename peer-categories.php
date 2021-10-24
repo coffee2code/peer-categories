@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: Peer Categories
- * Version:     2.1.5
+ * Version:     2.2
  * Plugin URI:  https://coffee2code.com/wp-plugins/peer-categories/
  * Author:      Scott Reilly
  * Author URI:  https://coffee2code.com/
@@ -18,7 +18,7 @@
  *
  * @package Peer_Categories
  * @author  Scott Reilly
- * @version 2.1.5
+ * @version 2.2
  */
 
 /*

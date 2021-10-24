@@ -6,7 +6,7 @@ License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Requires at least: 4.6
 Tested up to: 5.8
-Stable tag: 2.1.5
+Stable tag: 2.2
 
 List the categories that are peer (i.e. share the same category parent) to all lowest-level assigned categories for the specified post.
 
@@ -99,6 +99,26 @@ Customizes the function argument indicating if ancestor categories of all direct
 
 == Changelog ==
 
+= 2.2 (2021-10-23) =
+Highlights:
+
+This minor release removes support for long-deprecated functions (`peer_categories()`, `get_peer_categories_list()`, `get_peer_categories()`), adds DEVELOPER-DOCS.md, notes compatibility through WP 5.8+, and minor reorganization and tweaks to unit tests.
+
+Details:
+
+* Change: Remove long-deprecated functions `peer_categories()`, `get_peer_categories_list()`, and `get_peer_categories()`
+* New: Add DEVELOPER-DOCS.md and move template tag and hooks documentation into it
+* Change: Tweak installation instruction
+* Change: Note compatibility through WP 5.8+
+* Change: Pare down tags in readme.txt header
+* Unit tests:
+    * Change: Restructure unit test directories
+        * Change: Move `phpunit/` into `tests/phpunit/`
+        * Change: Move `phpunit/bin/` into `tests/`
+    * Change: Remove 'test-' prefix from unit test file
+    * Change: In bootstrap, store path to plugin file constant
+    * Change: In bootstrap, add backcompat for PHPUnit pre-v6.0
+
 = 2.1.5 (2021-04-17) =
 * Change: Note compatibility through WP 5.7+
 * Change: Update copyright date (2021)
@@ -112,18 +132,13 @@ Customizes the function argument indicating if ancestor categories of all direct
     * Change: Rename `phpunit.xml` to `phpunit.xml.dist` per best practices
 * Change: Note compatibility through WP 5.5+
 
-= 2.1.3 (2020-05-30) =
-* New: Add TODO.md with some new items listed
-* Change: Use HTTPS for link to WP SVN repository in bin script for configuring unit tests
-* Change: Note compatibility through WP 5.4+
-* Change: Update links to coffee2code.com to be HTTPS
-* Change: Update URLs used in examples and docs to be HTTPS and refer to proper example domain where appropriate
-* Change: Unit tests: Remove unnecessary unregistering of hooks and thusly delete `tearDown()`
-
 _Full changelog is available in [CHANGELOG.md](https://github.com/coffee2code/peer-categories/blob/master/CHANGELOG.md)._
 
 
 == Upgrade Notice ==
+
+= 2.2 =
+Minor update: removed support for long-deprecated functions (`peer_categories()`, `get_peer_categories_list()`, `get_peer_categories()`), added DEVELOPER-DOCS.md, noted compatibility through WP 5.8+, and minor reorganization and tweaks to unit tests
 
 = 2.1.5 =
 Trivial update: noted compatibility through WP 5.7+ and updated copyright date (2021)
