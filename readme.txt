@@ -6,7 +6,7 @@ License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Requires at least: 4.6
 Tested up to: 6.3
-Stable tag: 2.2
+Stable tag: 2.2.1
 
 List the categories that are peer (i.e. share the same category parent) to all lowest-level assigned categories for the specified post.
 
@@ -99,6 +99,10 @@ Customizes the function argument indicating if ancestor categories of all direct
 
 == Changelog ==
 
+= 2.2.1 (2023-05-20) =
+* Change: Note compatibility through WP 6.3+
+* Change: Update copyright date (2023)
+
 = 2.2 (2021-10-23) =
 Highlights:
 
@@ -123,19 +127,13 @@ Details:
 * Change: Note compatibility through WP 5.7+
 * Change: Update copyright date (2021)
 
-= 2.1.4 (2020-09-05) =
-* Change: Restructure unit test file structure
-    * New: Create new subdirectory `phpunit/` to house all files related to unit testing
-    * Change: Move `bin/` to `phpunit/bin/`
-    * Change: Move `tests/bootstrap.php` to `phpunit/`
-    * Change: Move `tests/` to `phpunit/tests/`
-    * Change: Rename `phpunit.xml` to `phpunit.xml.dist` per best practices
-* Change: Note compatibility through WP 5.5+
-
 _Full changelog is available in [CHANGELOG.md](https://github.com/coffee2code/peer-categories/blob/master/CHANGELOG.md)._
 
 
 == Upgrade Notice ==
+
+= 2.2.1 =
+Trivial update: noted compatibility through WP 6.3+ and updated copyright date (2023)
 
 = 2.2 =
 Minor update: removed support for long-deprecated functions (`peer_categories()`, `get_peer_categories_list()`, `get_peer_categories()`), added DEVELOPER-DOCS.md, noted compatibility through WP 5.8+, and minor reorganization and tweaks to unit tests
