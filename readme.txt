@@ -35,7 +35,7 @@ Vegetables
 
 If you directly assigned the categories "Fruiting" and "Pumpkin" to a post, `peer_categories()` would return a list that consists of: "Bell Pepper", "Cucumber", and "Pumpkin". Notice that since "Fruiting" was a parent to a directly assigned category, it and its peers are not included in the list. If only "Fruiting" were selected as a category, then "Leafy", "Fruiting", and "Podded" would have been listed.
 
-By default, categories are listed as an HTML list. The first argument to the template tag allows you to define a custom separator, e.g. to have a simple comma-separated list of peer categories: `<?php c2c_peer_categories(','); ?>`.
+By default, categories are listed as an HTML list. The first argument to the template tag allows you to define a custom separator, e.g. to have a simple comma-separated list of peer categories: `<?php c2c_peer_categories(', '); ?>`.
 
 As with categories listed via `the_category()`, categories that are listed are presented as links to the respective category's archive page.
 
@@ -49,7 +49,7 @@ Outputs something like:
 <li><a href="https://example.com/category/fruiting/cucumber">Cucumber</a></li>
 <li><a href="https://example.com/category/fruiting/pumpkin">Pumpkin</a></li></ul>`
 
-* `<?php c2c_peer_categories( ',' ); ?></ul>`
+* `<?php c2c_peer_categories( ', ' ); ?></ul>`
 
 Outputs something like:
 
