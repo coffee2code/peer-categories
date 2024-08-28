@@ -1,6 +1,7 @@
 # Changelog
 
 ## _(in-progress)_
+* Change: Remove behavior of `c2c_get_peer_categories()` potentially returning all top-level categories
 * Change: Prevent translations from containing unintended markup
 * Change: Add missing inline comment for translators
 * Change: Note compatibility through WP 6.6+

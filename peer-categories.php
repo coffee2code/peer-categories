@@ -166,23 +166,18 @@ if ( ! function_exists( 'c2c_get_peer_categories' ) ) :
 /**
  * Returns the list of peer categories for the specified post.
  *
- * If not supplied a post ID, then the top-level categories will be returned.
- *
  * @since 2.0
  *
  * @param  int|false $post_id        Optional. Post ID. Default false.
  * @param  bool      $omit_ancestors Optional. Prevent any ancestors from also
  *                   being listed, not just immediate parents? Default true.
- * @return array     The array of peer categories for the given category. If
- *                   false, then assumes a top-level category.
+ * @return array     The array of peer categories for the given post.
  */
 function c2c_get_peer_categories( $post_id = false, $omit_ancestors = true ) {
 	$categories = get_the_category( $post_id );
 
-	if ( empty( $categories ) ) {
-		return get_categories(
-			array( 'hide_empty' => false, 'user_desc_for_title' => false, 'title_li' => '', 'parent' => 0, 'exclude' => get_option( 'default_category' ) )
-		);
+	if ( ! $categories ) {
+		return array();
 	}
 
 	$peers = $parents = array();
