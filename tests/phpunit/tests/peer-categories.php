@@ -122,7 +122,9 @@ class Peer_Categories_Test extends WP_UnitTestCase {
 		$this->assertEquals( 10, has_action( 'c2c_get_peer_categories', 'c2c_get_peer_categories' ) );
 	}
 
-	/* c2c_get_peer_categories() */
+	/*
+	 * c2c_get_peer_categories()
+	 */
 
 	public function test_post_with_all_categories_in_branch_assigned_for_c2c_get_peer_categories() {
 		$post_id = $this->factory->post->create();
@@ -277,7 +279,9 @@ class Peer_Categories_Test extends WP_UnitTestCase {
 		$this->assertObjectArraysEquals( $expected, apply_filters( 'c2c_get_peer_categories', $post_id ) );
 	}
 
-	/* c2c_get_peer_categories_list() */
+	/*
+	 * c2c_get_peer_categories_list()
+	 */
 
 	public function test_c2c_get_peer_categories_list() {
 		$post_id = $this->factory->post->create();
