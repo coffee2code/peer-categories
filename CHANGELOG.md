@@ -13,6 +13,7 @@
     * Hardening: Prevent direct web access to `bootstrap.php`
     * Change: In bootstrap, store path to plugin directory in a constant
     * Change: Prevent PHP warnings due to missing core-related generated files
+    * New: Add tests for `c2c_peer_categories()`
     * New: Add tests for function invocation filters
     * Change: Tweak some inline comment formatting
 

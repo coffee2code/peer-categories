@@ -334,4 +334,39 @@ class Peer_Categories_Test extends WP_UnitTestCase {
 		$this->assertEquals( $expected2, c2c_get_peer_categories_list( ', ', $post_id2 ) );
 	}
 
+	/*
+	 * c2c_peer_categories()
+	 */
+
+	 public function test_c2c_peer_categories() {
+		$post_id = $this->factory->post->create();
+		wp_set_post_categories( $post_id, array( $this->cats['cat'], $this->cats['cat_1'], $this->cats['cat_1_1'] ) );
+
+		$expected = $this->expected( array( $this->cats['cat_1_2'], $this->cats['cat_1_1'], $this->cats['cat_1_3'] ) );
+
+		ob_start();
+		c2c_peer_categories( '', $post_id );
+		$output = ob_get_contents();
+		ob_end_clean();
+
+		$this->assertEquals( $expected, $output);
+	}
+
+	public function test_custom_separator_for_c2c_peer_categories() {
+		$post_id = $this->factory->post->create();
+		wp_set_post_categories( $post_id, array( $this->cats['cat_2_1'], $this->cats['cat_3_1'] ) );
+
+		$expected = $this->expected(
+			array( $this->cats['cat_2_1'], $this->cats['cat_3_1'], $this->cats['cat_2_2'], $this->cats['cat_3_2'], $this->cats['cat_2_3'], $this->cats['cat_3_3'] ),
+			', '
+		);
+
+		ob_start();
+		c2c_peer_categories( ', ', $post_id );
+		$output = ob_get_contents();
+		ob_end_clean();
+
+		$this->assertEquals( $expected, $output);
+	}
+
 }
