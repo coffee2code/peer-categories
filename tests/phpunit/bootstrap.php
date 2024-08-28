@@ -5,7 +5,8 @@
  * @package Peer_Categories
  */
 
-define( 'PEER_CATEGORIES_PLUGIN_FILE', dirname( __FILE__, 3 ) . '/peer-categories.php' );
+define( 'PEER_CATEGORIES_PLUGIN_DIR',  dirname( __FILE__, 3 ) );
+define( 'PEER_CATEGORIES_PLUGIN_FILE', PEER_CATEGORIES_PLUGIN_DIR . '/peer-categories.php' );
 
 ini_set( 'display_errors', 'on' );
 error_reporting( E_ALL );
