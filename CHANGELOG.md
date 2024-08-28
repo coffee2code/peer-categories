@@ -1,6 +1,7 @@
 # Changelog
 
 ## _(in-progress)_
+* Change: Prevent translations from containing unintended markup
 * Change: Add missing inline comment for translators
 * Change: Note compatibility through WP 6.6+
 * Change: Add missing inline documentation for a filter argument

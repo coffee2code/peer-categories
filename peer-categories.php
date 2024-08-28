@@ -55,7 +55,10 @@ if ( ! function_exists( 'c2c_peer_categories' ) ) :
  * @param  int|false $post_id   Optional. Post ID. Default false.
 */
 function c2c_peer_categories( $separator = '', $post_id = false ) {
-	echo c2c_get_peer_categories_list( $separator, $post_id );
+	echo wp_kses(
+		c2c_get_peer_categories_list( $separator, $post_id ),
+		array( 'ul' => array( 'class' => array() ), 'li' => array(), 'a' => array( 'href' => array(), 'title' => array(), 'rel' => array() ) )
+	);
 }
 
 add_action( 'c2c_peer_categories', 'c2c_peer_categories', 10, 2 );
@@ -109,7 +112,7 @@ function c2c_get_peer_categories_list( $separator = '', $post_id = false ) {
 		);
 	}
 
-	$rel = ( is_object( $wp_rewrite ) && $wp_rewrite->using_permalinks() ) ? 'rel="category tag"' : 'rel="category"';
+	$rel = ( is_object( $wp_rewrite ) && $wp_rewrite->using_permalinks() ) ? ' tag' : '';
 
 	$thelist = '';
 
@@ -127,11 +130,11 @@ function c2c_get_peer_categories_list( $separator = '', $post_id = false ) {
 		}
 
 		$thelist .= sprintf(
-			'<a href="%s" title="%s" %s>%s</a>',
+			'<a href="%s" title="%s" rel="category%s">%s</a>',
 			esc_url( get_category_link( $category->term_id ) ),
 			/* translators: %s: Category name. */
 			esc_attr( sprintf( __( 'View all posts in %s', 'peer-categories' ), $category->name ) ),
-			$rel,
+			esc_attr( $rel ),
 			esc_html( $category->name )
 		);
 
