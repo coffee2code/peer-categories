@@ -6,7 +6,7 @@ License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Requires at least: 4.6
 Tested up to: 6.6
-Stable tag: 2.2.1
+Stable tag: 2.3
 
 List the categories that are peer (i.e. share the same category parent) to all lowest-level assigned categories for the specified post.
 
@@ -99,6 +99,31 @@ Customizes the function argument indicating if ancestor categories of all direct
 
 == Changelog ==
 
+= 2.3 (2024-08-28) =
+Highlights:
+
+This minor release prevents translations from containing unintended markup, removes unnecessary functionality within `c2c_get_peer_categories()`, notes compatibility through WP 6.6+, removes unit tests from release packaging, and updates copyright date (2024).
+
+Details:
+
+* Change: Remove behavior of `c2c_get_peer_categories()` potentially returning all top-level categories
+* Change: Prevent translations from containing unintended markup
+* Change: Add missing inline comment for translators
+* Change: Note compatibility through WP 6.6+
+* Change: Add missing inline documentation for a filter argument
+* Change: Update copyright date (2024)
+* Change: Remove development and testing-related files from release packaging
+* New: Add `.gitignore` file
+* Unit tests:
+    * Allow tests to run against current versions of WordPress
+    * New: Add `composer.json` for PHPUnit Polyfill dependency
+    * Hardening: Prevent direct web access to `bootstrap.php`
+    * Change: In bootstrap, store path to plugin directory in a constant
+    * Change: Prevent PHP warnings due to missing core-related generated files
+    * New: Add tests for `c2c_peer_categories()`
+    * New: Add tests for function invocation filters
+    * Change: Tweak some inline comment formatting
+
 = 2.2.1 (2023-05-20) =
 * Change: Note compatibility through WP 6.3+
 * Change: Update copyright date (2023)
@@ -123,14 +148,13 @@ Details:
     * Change: In bootstrap, store path to plugin file constant
     * Change: In bootstrap, add backcompat for PHPUnit pre-v6.0
 
-= 2.1.5 (2021-04-17) =
-* Change: Note compatibility through WP 5.7+
-* Change: Update copyright date (2021)
-
 _Full changelog is available in [CHANGELOG.md](https://github.com/coffee2code/peer-categories/blob/master/CHANGELOG.md)._
 
 
 == Upgrade Notice ==
+
+= 2.3 =
+Minor update: prevented translations from containing unintended markup, removed unnecessary functionality within `c2c_get_peer_categories()`, noted compatibility through WP 6.6+, removed unit tests from release packaging, and updated copyright date (2024)
 
 = 2.2.1 =
 Trivial update: noted compatibility through WP 6.3+ and updated copyright date (2023)
