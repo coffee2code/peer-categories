@@ -128,6 +128,7 @@ function c2c_get_peer_categories_list( $separator = '', $post_id = false ) {
 		$thelist .= sprintf(
 			'<a href="%s" title="%s" %s>%s</a>',
 			esc_url( get_category_link( $category->term_id ) ),
+			/* translators: %s: Category name. */
 			esc_attr( sprintf( __( 'View all posts in %s', 'peer-categories' ), $category->name ) ),
 			$rel,
 			esc_html( $category->name )

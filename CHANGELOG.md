@@ -1,6 +1,7 @@
 # Changelog
 
 ## _(in-progress)_
+* Change: Add missing inline comment for translators
 * Change: Note compatibility through WP 6.6+
 * Change: Update copyright date (2024)
 * Change: Remove development and testing-related files from release packaging
