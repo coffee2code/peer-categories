@@ -74,7 +74,7 @@ If an assigned category is the parent for one or more other assigned categories 
 
 = Does this plugin include unit tests? =
 
-Yes.
+Yes. The tests are not packaged in the release .zip file or included in plugins.svn.wordpress.org, but can be found in the [plugin's GitHub repository](https://github.com/coffee2code/peer-categories/).
 
 
 == Developer Documentation ==
