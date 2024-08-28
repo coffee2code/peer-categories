@@ -3,6 +3,7 @@
 ## _(in-progress)_
 * Change: Add missing inline comment for translators
 * Change: Note compatibility through WP 6.6+
+* Change: Add missing inline documentation for a filter argument
 * Change: Update copyright date (2024)
 * Change: Remove development and testing-related files from release packaging
 * New: Add `.gitignore` file
