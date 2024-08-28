@@ -11,6 +11,7 @@
     * Hardening: Prevent direct web access to `bootstrap.php`
     * Change: In bootstrap, store path to plugin directory in a constant
     * Change: Prevent PHP warnings due to missing core-related generated files
+    * New: Add tests for function invocation filters
 
 ## 2.2.1 _(2023-05-20)_
 * Change: Note compatibility through WP 6.3+

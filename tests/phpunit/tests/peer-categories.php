@@ -116,6 +116,12 @@ class Peer_Categories_Test extends WP_UnitTestCase {
 	//
 
 
+	public function test_hooks_plugins_loaded() {
+		$this->assertEquals( 10, has_action( 'c2c_peer_categories', 'c2c_peer_categories' ) );
+		$this->assertEquals( 10, has_action( 'c2c_get_peer_categories_list', 'c2c_get_peer_categories_list' ) );
+		$this->assertEquals( 10, has_action( 'c2c_get_peer_categories', 'c2c_get_peer_categories' ) );
+	}
+
 	/* c2c_get_peer_categories() */
 
 	public function test_post_with_all_categories_in_branch_assigned_for_c2c_get_peer_categories() {
