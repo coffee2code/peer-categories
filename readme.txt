@@ -5,7 +5,7 @@ Tags: category, sibling, related posts, the_category, coffee2code
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Requires at least: 4.6
-Tested up to: 6.6
+Tested up to: 6.8
 Stable tag: 2.3
 
 List the categories that are peer (i.e. share the same category parent) to all lowest-level assigned categories for the specified post.
