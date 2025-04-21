@@ -1,6 +1,6 @@
 # Changelog
 
-## _(in-progress)_
+## 2.3.1 _(2025-04-21)_
 * Change: Note compatibility through WP 6.8+
 * Change: Note compatibility through PHP 8.3+
 * Change: Update copyright date (2025)
