@@ -72,7 +72,7 @@ Links: [Plugin Homepage](https://coffee2code.com/wp-plugins/peer-categories/) | 
 
 If an assigned category is the parent for one or more other assigned categories for the post, then the category parent is not included in the listing. Only peers to the lowest-level assigned categories are considered.
 
-= Does this plugin include unit tests? =
+= Does this plugin have unit tests? =
 
 Yes. The tests are not packaged in the release .zip file or included in plugins.svn.wordpress.org, but can be found in the [plugin's GitHub repository](https://github.com/coffee2code/peer-categories/).
 
