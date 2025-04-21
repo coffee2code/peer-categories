@@ -6,7 +6,7 @@ class Peer_Categories_Test extends WP_UnitTestCase {
 
 	private $cats;
 
-	public function setUp() {
+	public function setUp(): void {
 		parent::setUp();
 
 		$this->create_categories();
